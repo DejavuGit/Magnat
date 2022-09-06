@@ -3,7 +3,147 @@
 @import 'reset';
 @import 'global';
 
+// header //
+.header{
+ padding: 0 75px;
+ background-color: rgb(153, 98, 98);
+ &__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+}
+.menu{
+ &__list{
+  display: flex;
+  align-items: center;
+  padding: 22px 32px !important;
+  background-color: #fff;
+  border-radius: 56px;
+ 
+ }
+ &__item:not(:last-child){
+  margin-right: 48px;
+ }
+ &__link{
+  transition: all .3s ease;
+  color: $black;
+  display: flex;
+  align-items: center;
+ 
+  &:hover{
+   color: $sgreen;
+   svg{
+    fill: $sgreen;
+   }
+  }
+  svg{
+   fill: $black;
+   width: 16px;
+   height: 16px;
+   transition: all .3s ease;
+   margin-left: 16px;
+   transform: rotate(180deg);
+  }
+ }
+}
+.dropdown{
+ display: flex;
+ align-items: center;
+ position: relative;
+ &--active{
+  .dropdown__list{
+   opacity: 1;
+    visibility: visible;
+    transform: translateY(35px);
+  }
+  .menu__link{
+   color: $sgreen;
+  }
+  .menu__svg{
+   fill: $sgreen;
+   transform: rotate(0deg);
+  }
+ }
+ &__list{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 24px !important;
+  bottom: -120px;
+  left: -28px;
+  width: 147px;
+  transition: all .3s ease;
+  li:not(:last-child){margin-bottom: 8px;}
+  opacity: 0;
+  visibility: hidden;
+ }
+ &__link{
+  color: $black;
+  transition: all .3s ease;
+  &:not(:last-child){
+   margin-bottom: 8px;
+  }
+  &:hover{
+   color: $sgreen;
+  }
+ }
 
+}
+
+.menu__btn{
+
+ cursor:pointer;
+   width: 42px;
+   height: 42px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.3s ease-in;
+   background-color: transparent;
+ border:none;
+ &:hover{
+  .menu__sticks,
+  .menu__sticks::after,
+  .menu__sticks::before{
+   background-color:  $sgreen;
+  }
+
+ }
+}
+.menu__sticks{
+ display: block;
+ position: relative;
+ background: $black;
+ width: 26px;
+ height: 3px;
+ transition: .3s ease-in;
+ border-radius: 4px;
+ margin: 0 auto;
+ &::after,
+     &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: $black;
+      width: 75%;
+      height: 3px;
+      transition: .3s ease-in;
+      border-radius: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+     
+     }
+     &::after {
+      top: 8px;
+     }
+   
+     &::before {
+      top: -8px;
+     }
+}
+
+// main // 
 
 
 @import 'media';
