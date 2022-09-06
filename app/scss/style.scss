@@ -2,11 +2,17 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'swiper';
+@import 'swiper-pagination';
 
 // header //
 .header{
  padding: 0 75px;
- background-color: rgb(153, 98, 98);
+position: absolute;
+top: 16px;
+right: 0;
+left: 0;
+z-index: 5;
  &__wrapper{
   display: flex;
   justify-content: space-between;
@@ -144,6 +150,133 @@
 }
 
 // main // 
+
+.main{
+  background-image: url('../images/main.png');
+  background-position: 50%, 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 800px ;
+}
+.start{
+  display: flex;
+  align-items: flex-end;
+}
+// .mySwiper{
+
+// }
+.swiper-button-next::after,
+.swiper-button-prev::after{
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: $grayl;
+  cursor: pointer;
+  transition: all .3s ease;
+  opacity: .4;
+  svg{
+    width: 16px;
+    height: 16px;
+    transition: all .3s ease;
+    fill: #fff;
+  }
+  &:hover{
+    background-color: $yellow;
+    opacity: 1;
+    svg{
+      fill: $black;
+    }
+  }
+}
+.swiper-button-prev svg{
+  transform: rotate(180deg);
+}
+
+.start{
+  &__title{
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 24px;
+  }
+  &__text{
+    color: #fff;
+    max-width: 510px;
+    margin-bottom: 60px;
+  }
+}
+
+// buy-most //
+
+.buy-most{
+  &__title{
+    margin-bottom: 146px;
+  }
+  &__item{
+    background-color: #fff;
+    padding: 16px;
+    position: relative;
+    width: 320px;
+    border-radius: 16px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    position: relative;
+    padding-left: 40px;
+    color: $sgreen;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      background-image: url('../images/weight.svg');
+      background-position: 50%,50%;
+      background-repeat: no-repeat;
+    }
+    &--time{
+      margin-bottom: 12px;
+    }
+    &--time::before{
+      background-image: url('../images/time.svg');
+    }
+  }
+  &__wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between
+  }
+  &__name{
+    max-width: 170px;
+    font-size: 18px;
+  }
+  &__img{
+    position: absolute;
+    right: 26px;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+  &__shadow{
+    position: absolute;
+    right: -16px;
+    top: 46px;
+  }
+  &__btn{
+    color: #fff;
+    padding: 14px 16px;
+    border-radius: 40px;
+    background-color: $sgreen;
+  }
+}
 
 
 @import 'media';
