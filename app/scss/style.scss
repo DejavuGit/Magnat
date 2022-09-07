@@ -155,7 +155,7 @@ z-index: 5;
   background-position: 50%, 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  
+  margin-bottom: 150px;
   &__wrapper{
     position: relative;
     display: flex;
@@ -193,7 +193,8 @@ z-index: 5;
 }
 .Strawberry1,
 .Strawberry2,
-.list{
+.list,
+.list2{
   position: absolute;
 }
 .Strawberry1{
@@ -207,6 +208,10 @@ z-index: 5;
 .list{
   top: 70%;
   left: 45%;
+}
+.list2{
+  right: -40px;
+  bottom: -120px;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after{
@@ -258,7 +263,8 @@ z-index: 5;
 
 .buy-most{
   &__title{
-    margin-bottom: 146px;
+    margin-bottom: 150px;
+    margin-left: 100px;
   }
   &__item{
     background-color: #fff;
@@ -271,6 +277,8 @@ z-index: 5;
   &__inner{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 150px;
+    position: relative;
   }
   &__info{
     position: relative;
@@ -322,6 +330,82 @@ z-index: 5;
     border-radius: 40px;
     background-color: $sgreen;
   }
+ 
+}
+.blur-list{
+  position: absolute;
+  left: -70px;
+  top: -160px;
+}
+
+.extra{
+  &__grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 150px;
+    position: relative;
+  }
+  &__image{
+    position: relative;
+  }
+  &__group{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(25%,-56%);
+  }
+  &__box{
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    padding-left: 130px;
+    position: relative;
+  }
+  &__subtitle{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  &__title{
+    font-size: 28px;
+    margin-bottom: 16px;
+    line-height: 48px;
+  }
+  &__text{
+    max-width: 300px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  &__btn{
+    width: 140px;
+  }
+}
+.blur-flake{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.blueberry{
+  position: absolute;
+  right: 15%;
+  top: 35%;
+}
+.flake{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.flake2{
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.flake3{
+  position: absolute;
+  right: 0;
+  bottom: -40px;
 }
 
 // more-info //

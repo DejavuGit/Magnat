@@ -10,6 +10,7 @@ body{
     @extend %gil;
     display: flex;
     flex-direction: column;
+    background-color: $grayl;
 }
 .main{
     flex-grow: 1;
@@ -22,7 +23,6 @@ body{
 .btn{
     background-color: #fff;
     padding: 15px 26px;
-    height: 60px;
     color: $black;
     border-radius: 56px;
     border: none;
