@@ -149,35 +149,80 @@ z-index: 5;
      }
 }
 
-// main // 
 
-.main{
+.start{
   background-image: url('../images/main.png');
   background-position: 50%, 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 800px ;
+  
+  &__wrapper{
+    position: relative;
+    display: flex;
+    height: 800px;
+  }
+  &__swiper{
+    align-self: flex-end;
+    width: 540px;
+    margin-bottom: 83px;
+    margin-left: 75px;
+    padding: 12px;
+    .swiper-wrapper{
+      padding: 10px 0;
+    }
+    .swiper-pagination{
+      bottom: 22px;
+      @extend %gil;
+      color: #fff;
+      width: 40px;
+      left: 90%;
+    }
+    .swiper-button-next{
+      left: 70%;
+    }
+    .swiper-button-prev{
+      left: 50%;
+    }
+  }
 }
-.start{
-  display: flex;
-  align-items: flex-end;
-}
-// .mySwiper{
 
-// }
+.slider-bg{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.Strawberry1,
+.Strawberry2,
+.list{
+  position: absolute;
+}
+.Strawberry1{
+  top: 40%;
+  left: 35%;
+}
+.Strawberry2{
+  top: 25%;
+  left: 20%;
+}
+.list{
+  top: 70%;
+  left: 45%;
+}
 .swiper-button-next::after,
 .swiper-button-prev::after{
   display: none;
 }
+
 .swiper-button-next,
 .swiper-button-prev{
+  top: 84%;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: $grayl;
+  background-color: rgba(245, 243, 240, 0.4);
   cursor: pointer;
   transition: all .3s ease;
-  opacity: .4;
+  // opacity: .4;
   svg{
     width: 16px;
     height: 16px;

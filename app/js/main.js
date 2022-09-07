@@ -5,10 +5,11 @@ dropdown.forEach(drop =>{
  })
 })
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".start__swiper", {
  slidesPerView: 1,
  loop: true,
  speed: 1500,
+ spaceBetween: 20,
  pagination: {
    el: ".swiper-pagination",
    type: "fraction",
