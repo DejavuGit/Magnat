@@ -22,15 +22,25 @@ let swiper = new Swiper(".start__swiper", {
 
 let moreInfoSwiper = new Swiper(".more-info__swiper", {
 
-        // centeredSlides: true,
-        // spaceBetween: 30,
   slidesPerView: 2.1,
   loop: true,
   speed: 1500,
- 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
  });
+
+ let buyNowSwiper = new Swiper(".buy-now__swiper", {
+
+  // spaceBetween: 30,
+slidesPerView: 4.1,
+loop: true,
+speed: 1500,
+
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+});
 
